@@ -14,8 +14,6 @@ function ruby_wrapper() {
   unalias ruby
   CURRENT_RUBY=$(which ruby)
 
-  echo $CURRENT_RUBY
-
   if [ -e "$(pwd)/Gemfile.lock" ]
   then
     bundle exec $CURRENT_RUBY "$@"
